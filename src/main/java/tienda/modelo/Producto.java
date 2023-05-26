@@ -17,6 +17,10 @@ public class Producto {
     @ManyToOne
     private  Categoria categoria;
 
+    public Producto() {
+
+    }
+
     public Producto(String nombre, String descripcion, BigDecimal precio, Categoria categoria) {
         this.nombre = nombre;
         this.descripcion = descripcion;

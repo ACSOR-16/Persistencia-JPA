@@ -13,21 +13,22 @@ import java.math.BigDecimal;
 public class RegistroDeProducto {
     public static void main(String[] args) {
         Categoria celulares = new Categoria("celulares");
-        Producto celular = new Producto(
-                "Samsung",
-                "Celular Reacondicionado",
-                new BigDecimal("1000"),
-                celulares);
 
         EntityManager em = JPAUtils.getEntityManager();
 
-        ProductoDAO productoDAO = new ProductoDAO(em);
-
         em.getTransaction().begin();
 
-        productoDAO.guardar(celular);
+        em.persist(celulares);
 
-        em.getTransaction().commit();
-        em.close();
+        celulares.setNombre("LIBROS");
+
+        em.flush();
+        em.clear();
+
+        celulares = em.merge(celulares);
+        // NO SE CONSIDERA POR QUE YA SE CIERRA LA CONEXCION
+        celulares.setNombre("SOFTWARES");
+
+        em.flush();
     }
 }
