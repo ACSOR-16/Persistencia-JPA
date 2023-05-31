@@ -8,6 +8,8 @@ import tienda.utils.JPAUtils;
 import tienda.dao.PedidoDAO;
 import javax.persistence.EntityManager;
 import java.math.BigDecimal;
+import java.util.List;
+import java.util.Objects;
 
 public class RegistroDePedido {
     public static void main(String[] args) {
@@ -32,6 +34,15 @@ public class RegistroDePedido {
 
         em.getTransaction().commit();
 //        em.close();
+        BigDecimal valorTotal = pedidoDao.valorTotalVendiDo();
+        System.out.println(valorTotal);
+
+        List<Object[]> relatorio = pedidoDao.relatorioDeVentas();
+        for (Object[] obj:relatorio) {
+            System.out.println(obj[0]);
+            System.out.println(obj[1]);
+            System.out.println(obj[2]);
+        }
     }
 
     private static void registrarProducto() {
