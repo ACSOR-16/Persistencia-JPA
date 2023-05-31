@@ -34,12 +34,13 @@ public class ProductoDAO {
     }
 
     public List<Producto> consultaPorNombreDeCategoria(String nombre) {
-        String jpql = " SELECT p FROM Producto AS p WHERE p.categoria.nombre=:nombre";
+        String jpql = " SELECT p FROM Producto AS p WHERE p.categoria.nombre=:nombre ";
         return em.createQuery(jpql, Producto.class).setParameter("nombre", nombre).getResultList();
     }
 
     public BigDecimal consultarPrecioPorNombreDeProducto (String nombre) {
-        String jpql = " SELECT P.precio FROM Producto AS P WHERE P.nombre=:nombre";
-        return em.createQuery(jpql, BigDecimal.class).setParameter("nombre", nombre).getSingleResult();
+//        String jpql = " SELECT P.precio FROM Producto AS P WHERE P.nombre=:nombre ";
+//        return em.createQuery(jpql, BigDecimal.class).setParameter("nombre", nombre).getSingleResult();
+        return em.createNamedQuery("Producto.consultaDePrecio", BigDecimal.class).setParameter("nombre", nombre).getSingleResult();
     }
 }

@@ -4,8 +4,11 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@SuppressWarnings("all")
 @Entity
 @Table(name="productos")
+
+@NamedQuery(name = "Producto.consultaDePrecio", query = " SELECT P.precio FROM Producto AS P WHERE P.nombre=:nombre")
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

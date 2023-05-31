@@ -1,16 +1,13 @@
 package tienda.prueba;
 
-import tienda.dao.CategoriaDao;
+import tienda.dao.CategoriaDAO;
 import tienda.dao.ProductoDAO;
 import tienda.modelo.Categoria;
 import tienda.modelo.Producto;
 import tienda.utils.JPAUtils;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.math.BigDecimal;
-import java.util.List;
 
 public class RegistroDeProducto {
     public static void main(String[] args) {
@@ -37,7 +34,7 @@ public class RegistroDeProducto {
 
         EntityManager em = JPAUtils.getEntityManager();
         ProductoDAO productoDAO = new ProductoDAO(em);
-        CategoriaDao categoriaDao = new CategoriaDao(em);
+        CategoriaDAO categoriaDao = new CategoriaDAO(em);
 
         em.getTransaction().begin();
 

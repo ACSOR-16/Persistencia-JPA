@@ -1,14 +1,13 @@
 package tienda.dao;
 
 import tienda.modelo.Categoria;
-import tienda.modelo.Producto;
 
 import javax.persistence.EntityManager;
 
-public class CategoriaDao {
+public class CategoriaDAO {
     private EntityManager em;
 
-    public CategoriaDao(javax.persistence.EntityManager em) {
+    public CategoriaDAO(javax.persistence.EntityManager em) {
         this.em = em;
     }
 

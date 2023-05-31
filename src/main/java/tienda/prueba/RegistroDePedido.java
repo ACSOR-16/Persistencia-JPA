@@ -1,15 +1,16 @@
 package tienda.prueba;
 
-import tienda.dao.CategoriaDao;
+import tienda.dao.CategoriaDAO;
 import tienda.dao.ClienteDAO;
 import tienda.dao.ProductoDAO;
 import tienda.modelo.*;
 import tienda.utils.JPAUtils;
 import tienda.dao.PedidoDAO;
+import tienda.vo.RelatorioDeVenta;
+
 import javax.persistence.EntityManager;
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Objects;
 
 public class RegistroDePedido {
     public static void main(String[] args) {
@@ -37,12 +38,8 @@ public class RegistroDePedido {
         BigDecimal valorTotal = pedidoDao.valorTotalVendiDo();
         System.out.println(valorTotal);
 
-        List<Object[]> relatorio = pedidoDao.relatorioDeVentas();
-        for (Object[] obj:relatorio) {
-            System.out.println(obj[0]);
-            System.out.println(obj[1]);
-            System.out.println(obj[2]);
-        }
+        List<RelatorioDeVenta> relatorio = pedidoDao.relatorioDeVentasVO();
+        relatorio.forEach(System.out::println);
     }
 
     private static void registrarProducto() {
@@ -56,7 +53,7 @@ public class RegistroDePedido {
 
         EntityManager em = JPAUtils.getEntityManager();
         ProductoDAO productoDAO = new ProductoDAO(em);
-        CategoriaDao categoriaDao = new CategoriaDao(em);
+        CategoriaDAO categoriaDao = new CategoriaDAO(em);
 
         em.getTransaction().begin();
 
