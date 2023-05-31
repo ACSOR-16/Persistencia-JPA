@@ -1,6 +1,7 @@
 package tienda.prueba;
 
 import tienda.dao.CategoriaDao;
+import tienda.dao.ClienteDAO;
 import tienda.dao.ProductoDAO;
 import tienda.modelo.*;
 import tienda.utils.JPAUtils;
@@ -17,6 +18,7 @@ public class RegistroDePedido {
         ProductoDAO productoDAO = new ProductoDAO(em);
         Producto producto = productoDAO.consultaPorId(1L);
 
+        ClienteDAO clienteDAO = new ClienteDAO(em);
         PedidoDAO pedidoDao = new PedidoDAO(em);
 
         Cliente cliente = new Cliente("juan", "70440047");
@@ -24,6 +26,8 @@ public class RegistroDePedido {
         pedido.agregarItems(new ItemsPedido(5, producto, pedido));
 
         em.getTransaction().begin();
+
+        clienteDAO.guardar(cliente);
         pedidoDao.guardar(pedido);
 
         em.getTransaction().commit();
