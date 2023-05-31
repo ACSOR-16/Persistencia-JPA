@@ -24,6 +24,7 @@ public class ItemsPedido {
         this.cantidad = cantidad;
         this.producto = producto;
         this.pedido = pedido;
+        this.precioUnitario = producto.getPrecio();
     }
 
     public Long getId() {

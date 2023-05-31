@@ -3,6 +3,7 @@ package tienda.modelo;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,11 +16,15 @@ public class Pedido {
     private BigDecimal valorTotal;
     @ManyToOne
     private Cliente cliente;
-    @OneToMany
-    private List<ItemsPedido> items;
+    @OneToMany(mappedBy = "pedido")
+    private List<ItemsPedido> items = new ArrayList<>();
 
     public Pedido() {
+    }
 
+    public void agregarItems(ItemsPedido item) {
+        item.setPedido(this);
+        this.items.add(item);
     }
 
     public Pedido(Cliente cliente) {

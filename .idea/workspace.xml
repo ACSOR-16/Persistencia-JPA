@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="973a3614-d86e-46ed-8c7d-604714baa2fd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tienda/modelo/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tienda/modelo/ItemsPedido.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tienda/modelo/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tienda/dao/PedidoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tienda/prueba/RegistroDePedido.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tienda/modelo/ItemsPedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tienda/modelo/ItemsPedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tienda/modelo/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tienda/modelo/Pedido.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +52,25 @@
       <recent name="tienda.modelo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tienda.modelo" />
       <recent name="tienda.dao" />
+      <recent name="tienda.prueba" />
+      <recent name="tienda.modelo" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RegistroDePedido">
+    <configuration name="RegistroDePedido" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tienda.prueba.RegistroDePedido" />
+      <module name="tienda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tienda.prueba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegistroDeProducto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tienda.prueba.RegistroDeProducto" />
       <module name="tienda" />
@@ -72,6 +86,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RegistroDePedido" />
         <item itemvalue="Application.RegistroDeProducto" />
       </list>
     </recent_temporary>
