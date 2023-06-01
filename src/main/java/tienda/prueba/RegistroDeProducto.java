@@ -3,6 +3,7 @@ package tienda.prueba;
 import tienda.dao.CategoriaDAO;
 import tienda.dao.ProductoDAO;
 import tienda.modelo.Categoria;
+import tienda.modelo.CategoriaId;
 import tienda.modelo.Producto;
 import tienda.utils.JPAUtils;
 
@@ -21,6 +22,9 @@ public class RegistroDeProducto {
 //        productos.forEach(prod -> System.out.println(prod.getDescripcion()));
         BigDecimal precio = productoDAO.consultarPrecioPorNombreDeProducto("Xiaomi Redmi");
         System.out.println(precio);
+
+        Categoria find = em.find(Categoria.class, new CategoriaId("CELULARES", "nombreramdom"));
+        System.out.println(find.getNombre());
     }
 
     private static void registrarProducto() {
