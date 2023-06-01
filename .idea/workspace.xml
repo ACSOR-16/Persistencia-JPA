@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="973a3614-d86e-46ed-8c7d-604714baa2fd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tienda/prueba/PruebaDeParametros.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tienda/dao/PedidoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tienda/dao/PedidoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tienda/prueba/PruebaDeDesempenho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tienda/prueba/PruebaDeDesempenho.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tienda/dao/ProductoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tienda/dao/ProductoDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +55,22 @@
       <recent name="tienda.modelo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PruebaDeDesempenho">
+  <component name="RunManager" selected="Application.PruebaDeParametros">
     <configuration name="PruebaDeDesempenho" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tienda.prueba.PruebaDeDesempenho" />
+      <module name="tienda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tienda.prueba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PruebaDeParametros" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tienda.prueba.PruebaDeParametros" />
       <module name="tienda" />
       <extension name="coverage">
         <pattern>
@@ -97,6 +110,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PruebaDeParametros" />
         <item itemvalue="Application.PruebaDeDesempenho" />
         <item itemvalue="Application.RegistroDePedido" />
         <item itemvalue="Application.RegistroDeProducto" />
