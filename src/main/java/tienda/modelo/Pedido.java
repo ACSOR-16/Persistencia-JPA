@@ -14,12 +14,20 @@ public class Pedido {
     private Long id;
     private LocalDate fecha = LocalDate.now();
     private BigDecimal valorTotal = new BigDecimal(0);
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Cliente cliente;
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
     private List<ItemsPedido> items = new ArrayList<>();
 
     public Pedido() {
+    }
+
+    public List<ItemsPedido> getItems() {
+        return items;
+    }
+
+    public void setItems(List<ItemsPedido> items) {
+        this.items = items;
     }
 
     public void agregarItems(ItemsPedido item) {
